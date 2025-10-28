@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Title</title>
+</head>
+<style>
+     @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+     body{
+        font-family: Galmuri11
+     }
+   #steal{
+    border-radius:50%;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+ z-index: 11;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+left: 50%;
+top: 80%;
+transform: translate(-50%, -50%);
+   }
+   #doorArea{
+    position: absolute;
+    width: 19%;
+    height: 19%;
+    left: 42%;
+    top: 21%;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 10;
+   }
+   #doorFront{
+    position: absolute;
+    transition: opacity 1s ease;
+    z-index: 2;
+    width: 80%;
+    left: 10%;
+     top: 15%;
+   }
+     #doorBack{
+        width: 80%;
+        left: 10%;
+         top: 15%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1
+   }
+   #textbox{
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 1%;
+    text-decoration: none;
+    color: black;
+
+   }
+ 
+   
+   
+</style>
+<body>
+<div id = "text">앗 문이 앞을 가로막고 있어요! 아래 있는 '훔치기' 버튼을 클릭하여 장애물을 없애보세요. </div> 
+   <img src = "문.jpg" id = doorFront>
+<img src = "열린문.png" id = doorBack>
+<div id="steal">훔치기</div>
+
+<a id="textbox" href = "문2.html"></a>
+<div id = "doorArea"></div> 
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Title</title>
+</head>
+<style>
+    @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+    #gaze {
+  position: fixed;
+  top: 2%;
+  left: 3%;
+  width: 35vw;               
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+#gaze-fill{
+    height: 100%;
+    width: 100%;
+    background-color: #65c466;
+    border-radius: 8px;
+    transition: width 0.8s ease, background-color 1s ease;
+}
+   #image1{
+    margin-top: 10px;
+    position: absolute;
+    transition: opacity 1s ease;
+    width: 80%;
+    left: 10%;
+     top: 6%;
+     z-index:1
+   }
+   #image2{
+    margin-top: 10px;
+  position: absolute;
+    transition: opacity 1s ease;
+    width: 80%;
+    left: 10%;
+     top: 6%;
+     z-index:10;
+     overflow: visible;
+     pointer-events: auto;
+     display: block;
+   }
+   #text2{
+    top: 43%;
+    position:absolute;
+
+   }
+   #steal1{
+    border-radius:50%;
+   background-color: black;
+   color:white;
+    width: 100px;
+    height: 100px;
+ z-index: 99;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+left: 50%;
+top: 80%;
+transform: translate(-50%, -50%);
+   }
+
+      #visible{
+        opacity: 1; 
+        transition: opacity 1s ease;
+        left: 1%;
+        top: 40%;
+        position: absolute;
+    }
+    #visible.unvisible{
+        opacity: 0;
+    }
+    #choosebox{
+      display: none;
+      flex-direction: column;
+    row-gap: 10px;}
+#choose1{
+  position: absolute;
+  left: 20%;
+  top: 43%;
+  z-index: 10
+}
+#choose2{
+  position: absolute;
+  left: 20%;
+  top: 49%;
+  z-index: 10
+}
+#choose3{
+  position: absolute;
+  left: 13%;
+  top: 60%
+}
+#gameover{
+  flex-direction: column;
+  display: none;
+  font-size: 8vh;
+  font-weight: bold;
+  z-index: 10000;
+  position: absolute;
+  left: 1%;
+  top: 33%;
+
+ 
+}
+.comment{
+  font-size: 15px;
+  font-weight: normal
+}
+#win{
+  display: none;
+  top: 40%;
+  position: absolute;
+  font-weight: bold;
+   font-size: 8vh;
+   z-index: 20;
+   left: 3.5%;
+}
+
+ 
+</style>
+<body>
+    <div id = "gaze">
+    <div id = "gaze-fill"></div>
+</div>
+<img src = "병사가나타남.png" id = "image1">
+<img src = "문지기.png" id = "image2">
+
+<div id = "visible">이번에는 '정체성 게이지'에 대해 설명해드릴게요. 정체성 게이지란 용사님께서 자아를 유지하기 위해서 필수적이예요! 이 게이지가 0이 된다면...용사님께서는 더 이상 살아있는 사람이 아니게 될지도 몰라요. 이번엔 '병사'라는 장애물을 뚫고 앞으로 나아가세요!
+</div>
+<div id = "steal1">훔치기</div>
+<div id = "choosebox">
+  <div id = "choose1">
+  ▶ 문지기 </div>
+    <div id = "choose2">
+  ▶ 직업정신 </div>
+<div id = "choose3">
+  더 게이지가 적게 들 거 같은 걸 선택하세요!</div></div>
+  <div id = "gameover">
+  GAME OVER
+<span class= "comment">용사님은 승리도 패배도 그 무엇도 인식하지 못하는 '무(無)개념적'인간이 되어버렸습니다. 용사님은 아직 게임 속에 남아있지만, 왜 여기 있는지, 무엇을 해야 하는지, 심지어 '내'가 누군인지에 대해 알지 못하니다. 게임은 끝나지 않지만 당신은 아무것도 할 수 없습니다.</span></div>
+ <div id = "win">스테이지 클리어!</div>
+    <script defer type="module" src="/src/2.js"></script>
+</body>
+
+</html>
